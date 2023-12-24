@@ -8,7 +8,7 @@ import { CardCategoria } from '../../components/CardCategoria';
 import { CardBanner } from '../../components/CardBanner';
 
 import { useState } from 'react';
-import categoriasJson from '../../database/categorias.json'
+import categoriasJson from '../../../database/categorias.json'
 
 export default function Home(props) {
 

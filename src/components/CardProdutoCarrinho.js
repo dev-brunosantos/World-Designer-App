@@ -6,7 +6,7 @@ export const CardProdutoCarrinho = ({
     imagem, produto, quantidade, preco, adicionar, remover
 }) => {
     return (
-        <View style={ProdutoCarrinho.container}>
+        <TouchableOpacity style={ProdutoCarrinho.container}>
             <View style={ProdutoCarrinho.containerImagem}>
                 <Image src={imagem} style={ProdutoCarrinho.imagem} />
             </View>
@@ -30,6 +30,6 @@ export const CardProdutoCarrinho = ({
                     </View>
                 </View>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }

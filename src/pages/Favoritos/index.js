@@ -19,7 +19,8 @@ export default function Favoritos() {
                         produto="Teste 1"
                         preco={22.90}
                         imagem="https://github.com/dev-brunosantos.png"
-                    /><CardProdutoCarrinho
+                    />
+                    <CardProdutoCarrinho
                         produto="Teste 1"
                         preco={22.90}
                         imagem="https://github.com/dev-brunosantos.png"

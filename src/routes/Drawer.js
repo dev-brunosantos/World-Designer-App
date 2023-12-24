@@ -1,15 +1,18 @@
-import { View, Text, TouchableOpacity } from 'react-native'
+import { useState } from 'react'
+import { View, Image, Text } from 'react-native'
 import { DrawerItemList, createDrawerNavigator } from '@react-navigation/drawer'
-import Home from '../pages/Home'
-import { Cabecalho } from '../components/Cabecalho'
-
-import { Cores } from '../styles/Cores'
+// IMPRTAÇÃO DAS PAGINAS
 import BottomTabs from './BottomTabs'
 import Categorias from '../pages/Categorias'
+// IMPORTAÇÃO DE ESTILOS
+import { Cores } from '../styles/Cores'
 
 const drawer = createDrawerNavigator()
 
 export default function Drawer(props) {
+
+    const [usuarioNome, setUsuarioNome] = useState(props.route.params.usuario)
+
     function Perfil() {
         return (
             <>
@@ -18,52 +21,14 @@ export default function Drawer(props) {
                         backgroundColor: `${Cores.azul}`,
                         height: 170,
                         justifyContent: 'space-evenly',
-                        // marginTop: 63,
-                        // marginTop: '1%',
-                        // paddingTop: 60,
-                        paddingHorizontal: 20,
-                        marginBottom: 40,
-                        // borderWidth: 1,
+                        marginBottom: 40
                     }}
                 >
-                    <Text style={{fontWeight: 'bold', fontSize: 22}}>Olá, Bruno Santos</Text>
-                    <View
-                        style={{
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                            justifyContent: 'space-between'
-                        }}
-                    >
+                    <Image 
+                        source={require('../../assets/logomarca.png')}
+                        style={{ width: 280, height: 140 }}
+                    />
 
-                        <TouchableOpacity 
-                            style={{
-                                width: '45%',
-                                padding: 10,
-                                borderWidth: 1,
-                                borderRadius: 5,
-                                alignItems: 'center',
-                                justifyContent: 'center' 
-                            }}
-                        >
-                            <Text style={{fontSize: 20, fontWeight: 'bold', color: '#fff'}}>Perfil</Text>
-                        </TouchableOpacity>
-
-                        <TouchableOpacity 
-                            style={{
-                                width: '45%',
-                                padding: 10,
-                                borderWidth: 1,
-                                borderRadius: 5,
-                                alignItems: 'center',
-                                justifyContent: 'center' 
-                            }}
-                        >
-                            <Text style={{fontSize: 20, fontWeight: 'bold', color: '#fff'}}>
-                                Pedidos
-                            </Text>
-                        </TouchableOpacity>
-
-                    </View>
                 </View>
             </>
         )
@@ -89,9 +54,10 @@ export default function Drawer(props) {
                 headerStatusBarHeight: -60,
             }}
         >
-            <drawer.Screen
+            <drawer.Screen key={1}
                 name='Tabs'
                 component={BottomTabs}
+                
                 options={{
                     headerLeftContainerStyle: {
                         position: 'absolute',
@@ -100,12 +66,11 @@ export default function Drawer(props) {
                     },
                     headerStatusBarHeight: -60,
                     title: '',
-                    
                     drawerLabel: "Home"
                 }}
             />
 
-            <drawer.Screen   
+            <drawer.Screen key={2}
                 name='Categorias'
                 component={Categorias}
                 options={{

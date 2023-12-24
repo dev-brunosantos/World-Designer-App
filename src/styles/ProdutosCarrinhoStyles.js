@@ -5,12 +5,16 @@ export const ProdutoCarrinho = StyleSheet.create({
     container: {
         width: '80%',
         height: 110,
-        borderWidth: 1,
+        // borderWidth: 1,
         borderRadius: 10,
         marginVertical: 10,
         padding: 5,
-        flexDirection: 'row', 
-        backgroundColor: `${Cores.azul}`
+        flexDirection: 'row',
+        backgroundColor: `${Cores.azul}`,
+        shadowOffset: { width: 0, height: 10 },
+        shadowOpacity: 1,
+        shadowRadius: 2,
+        elevation: 15
     },
     containerImagem: {
         width: '30%',
@@ -37,7 +41,7 @@ export const ProdutoCarrinho = StyleSheet.create({
     containerBtnPreco: {
         height: '48%',
         flexDirection: 'row',
-        alignItems: "center", 
+        alignItems: "center",
         justifyContent: "space-between"
     },
     botoes: {

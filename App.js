@@ -1,32 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-// import { StyleSheet, Text, View, StatusBar } from 'react-native';
-// import Home from './src/pages/Home';
-// export default function App() {
-//   return (
-//       <>
-//       <StatusBar style="auto" />
-//       <Home />  
-//       </>
-
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
-
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
+// IMPORTAÇÃO DE PAGINAS
+import Login from './src/pages/Login';
+import NovoUsuario from './src/pages/Login/NovoUsuario';
 import Drawer from './src/routes/Drawer'
-import { Cores } from './src/styles/Cores';
 import Carrinho from './src/pages/Carrinho';
+// IMPORTAÇÃO DE COMPONENTES
 import { BtnFechar } from './src/components/BtnFechar';
-import { View } from 'react-native';
+// IMPORTAÇÃO DE ESTILOS E CORES
+import { Cores } from './src/styles/Cores';
 
 const stack = createStackNavigator()
 
@@ -42,17 +25,25 @@ export default function App(props) {
       {/* <StatusBar  translucent={true}/> */}
       <NavigationContainer>
         <stack.Navigator>
-          <stack.Screen
-            name='Drawer'
-            component={Drawer}
-            options={{ 
-              headerShown: false,
-              // headerTransparent: true,
-              title: ''
-             }}
-          />
+          <stack.Screen key={1}
+            name='Login'
+            component={Login}
+            options={{ headerShown: false }}
+            />
 
           <stack.Screen 
+            name='Novo Usuário'
+            component={NovoUsuario}
+            options={{ headerShown: false }}
+          />
+
+          <stack.Screen key={2}
+            name='Drawer'
+            component={Drawer}
+            options={{ headerShown: false, title: '' }}
+          />
+
+          <stack.Screen key={3}
             name='Carrinho de Compras'
             component={Carrinho}
           />
