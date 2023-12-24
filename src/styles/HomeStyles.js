@@ -4,24 +4,18 @@ export const HomeStyle = StyleSheet.create({
     page: {
         flex: 1,
         alignItems: "center",
-        // justifyContent: "space-evenly"
-        // paddingTop: -20,
         backgroundColor: '#fafafa',
         zIndex: 999
     },
     cabecalho: {
         width: '100%',
         height: 66,
-        // borderWidth: 1,
         paddingVertical: 10,
         flexDirection: 'row',
         alignItems: "center",
         justifyContent: "space-around",
         backgroundColor: 'rgb(0,200,255)',
-        // marginTop: 60,
-        // position: 'absolute',
         top: 2,
-        // zIndex: 999
     },
     containerInput: {
         backgroundColor: '#fff',
@@ -31,7 +25,6 @@ export const HomeStyle = StyleSheet.create({
         marginLeft: 10,
         flexDirection: 'row',
         alignItems: "center",
-        // justifyContent: "center",
         position: "relative",
     }, 
     input: {

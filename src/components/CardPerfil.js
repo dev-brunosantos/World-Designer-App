@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
         width: 115,
         height: 115,
         marginHorizontal: 10,
-        // borderWidth: 1,
         alignItems: "center",
         justifyContent: "center" 
     },
@@ -29,13 +28,11 @@ const styles = StyleSheet.create({
         width: '60%',
         height: '60%',
         borderWidth: 1,
-        // borderColor: Cores.azul,
         borderRadius: 200,
         alignItems: "center",
         justifyContent: "center"
     },
     texto: {
-        // color: Cores.azul,
         fontSize: 16,
         fontWeight: "bold",
         marginVertical: 5

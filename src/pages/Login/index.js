@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { Input, Senha } from '../../components/Inputs'
-
 // IMPORTAÇÃO DE ESTILOS E CORES
 import { PagesStyles } from '../../styles/PagesStyles';
 import { Cores } from '../../styles/Cores';

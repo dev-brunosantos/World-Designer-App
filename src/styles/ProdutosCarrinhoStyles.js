@@ -5,7 +5,6 @@ export const ProdutoCarrinho = StyleSheet.create({
     container: {
         width: '80%',
         height: 110,
-        // borderWidth: 1,
         borderRadius: 10,
         marginVertical: 10,
         padding: 5,

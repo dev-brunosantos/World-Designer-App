@@ -8,15 +8,9 @@ const tabs = createBottomTabNavigator()
 import { icones } from '../pages/Favoritos/Icones'
 import Usuario from '../pages/Usuario'
 
-const criarIcone = (icone) => {
-    return icone 
-}
+const criarIcone = (icone) => { return icone }
 
 export default function BottomTabs(props) {
-
-    // const teste = props.route.params.usuario
-    // console.log(teste)
-
     return (
         <tabs.Navigator
             screenOptions={{
@@ -37,24 +31,21 @@ export default function BottomTabs(props) {
             }}
         >
             <tabs.Screen key={1}
-                name='Home'
-                component={Home}
+                name='Home' component={Home}
                 options={{
                     tabBarIcon: (() => { return criarIcone(icones.home) })
                 }}
             />
 
             <tabs.Screen key={2}
-                name='Favoritos'
-                component={Favoritos}
+                name='Favoritos' component={Favoritos}
                 options={{
                     tabBarIcon: (() => { return criarIcone(icones.favoritos) })
                 }}
             />
 
             <tabs.Screen key={3}
-                name='Perfil'
-                component={Usuario}
+                name='Perfil' component={Usuario}
                 options={{
                     headerShown: false,
                     tabBarIcon: (() => { return criarIcone(icones.usuario) })

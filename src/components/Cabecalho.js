@@ -1,4 +1,3 @@
-import { DrawerItemList } from '@react-navigation/drawer';
 import { View, TextInput, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'
 

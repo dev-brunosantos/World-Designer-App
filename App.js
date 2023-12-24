@@ -31,19 +31,19 @@ export default function App(props) {
             options={{ headerShown: false }}
             />
 
-          <stack.Screen 
+          <stack.Screen key={2}
             name='Novo Usuário'
             component={NovoUsuario}
             options={{ headerShown: false }}
           />
 
-          <stack.Screen key={2}
+          <stack.Screen key={3}
             name='Drawer'
             component={Drawer}
             options={{ headerShown: false, title: '' }}
           />
 
-          <stack.Screen key={3}
+          <stack.Screen key={4}
             name='Carrinho de Compras'
             component={Carrinho}
           />

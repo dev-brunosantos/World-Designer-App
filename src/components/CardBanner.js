@@ -17,7 +17,6 @@ export const CardBanner = ({ imagem, funcao, fundoCor, txt }) => {
                 }}
             >
                 <Image src={imagem} style={styles.img} />
-                {/* <Text style={{fontSize: 30}}>BANNER: {txt}</Text> */}
             </TouchableOpacity>
         </View>
     )

@@ -21,8 +21,6 @@ export const CardCategoria = ({ imagem, local, categoria, funcao }) => {
             <View style={styles.containerImg}>
                 <Image source={local} src={imagem} style={styles.img} />
             </View>
-            {/* <Text style={styles.txt}> {categoria} </Text> */}
-
         </TouchableOpacity>
     )
 }

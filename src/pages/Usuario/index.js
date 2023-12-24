@@ -3,13 +3,13 @@ import { Feather } from '@expo/vector-icons'
 // IMPORTAÇÃO DE COMPONENTES
 import { CardFalarConosco } from '../../components/CardFalarConosco';
 import { CardPerfil } from '../../components/CardPerfil';
+import { Botao } from '../../components/Botao';
 // IMPORTAÇÃO DE ESTILOS E CORES
 import { Cores } from '../../styles/Cores';
-
+import { PagesStyles } from '../../styles/PagesStyles';
+// IMPORTAÇÃO DE ARQUIVO JSON
 import opcoes from '../../../database/perfilOpcoes.json'
 import falarConosco from '../../../database/falarConosco.json'
-import { PagesStyles } from '../../styles/PagesStyles';
-import { Botao } from '../../components/Botao';
 
 export default function Usuario(props) {
   return (

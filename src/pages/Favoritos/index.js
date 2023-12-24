@@ -3,7 +3,7 @@ import { CardProdutoCarrinho } from '../../components/CardProdutoCarrinho';
 
 export default function Favoritos() {
     return (
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.page}>
                 <Text style={styles.titulo}>
                     Tela de Favoritos

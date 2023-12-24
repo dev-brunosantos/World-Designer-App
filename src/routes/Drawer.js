@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { View, Image, Text } from 'react-native'
+import { View, Image } from 'react-native'
 import { DrawerItemList, createDrawerNavigator } from '@react-navigation/drawer'
 // IMPRTAÇÃO DAS PAGINAS
 import BottomTabs from './BottomTabs'

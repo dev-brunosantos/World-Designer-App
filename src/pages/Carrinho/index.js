@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import { View, Text } from "react-native";
 import { CardProdutoCarrinho } from "../../components/CardProdutoCarrinho";
 
 export default function Carrinho() {
@@ -46,7 +46,3 @@ export default function Carrinho() {
         </View>
     )
 }
-
-// const styles = StyleSheet.create({
-
-// })
