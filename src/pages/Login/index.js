@@ -24,7 +24,7 @@ export default function Login(props) {
         <View style={[PagesStyles.page, { backgroundColor: Cores.azul }]}>
             <Image
                 source={require('../../../assets/logomarca.png')}
-                style={{ width: '80%', height: 150, marginTop: -30 }}
+                style={{ width: '80%', height: 150, marginTop: -10 }}
             />
 
             <Text style={[PagesStyles.titulos, { color: Cores.branco }]}>Usuário</Text>

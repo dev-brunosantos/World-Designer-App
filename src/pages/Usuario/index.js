@@ -52,6 +52,7 @@ export default function Usuario(props) {
           <View style={UsuarioStyles.containers}>
             <Botao
               titulo="Sair"
+              background={Cores.branco}
               funcao={() => props.navigation.navigate('Login')}
             />
           </View>

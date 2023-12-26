@@ -2,12 +2,13 @@ import { View, Text, ScrollView } from 'react-native';
 import CardTitulo from './CardTitulo';
 
 import categoriasJson from '../../../database/categorias.json'
+import { Cores } from '../../styles/Cores';
 
 export default function Categorias() {
   return (
     <View style={{ flex: 1, alignItems: 'center' }}>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={{ width: '100%', alignItems: 'center' }}>
+      <ScrollView showsVerticalScrollIndicator={false} >
+        <View style={{ width: '100%', alignItems: 'center', marginBottom: 30 }}>
           {/* <CardTitulo 
             imagem="https://bythiti.com.br/wp-content/uploads/2023/09/IMG_8990.jpg"
             titulo="Canecas"

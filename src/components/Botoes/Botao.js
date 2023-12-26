@@ -1,12 +1,12 @@
 import { StyleSheet, TouchableOpacity, Text } from "react-native";
 
-export const Botao = ({titulo, txtColor, borderColor, funcao, bacoground}) => {
+export const Botao = ({titulo, txtColor, borderColor, funcao, background}) => {
     return(
         <TouchableOpacity
             onPress={funcao}
             style={[
                 style.btn,
-                { borderColor: borderColor }
+                { borderColor: borderColor, backgroundColor: background }
             ]}
         >
             <Text
