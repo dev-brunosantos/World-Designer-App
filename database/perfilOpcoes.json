@@ -1,0 +1,22 @@
+[
+    {
+        "titulo": "Meus dados",
+        "icone": "user"
+    },
+    {
+        "titulo": "Endereços",
+        "icone": "home"
+    },
+    {
+        "titulo": "Créditos",
+        "icone": "dollar-sign"
+    },
+    {
+        "titulo": "Cartões",
+        "icone": "credt-card"
+    },
+    {
+        "titulo": "Favoritos",
+        "icone": "heart"
+    }
+]

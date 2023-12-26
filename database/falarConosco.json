@@ -1,0 +1,17 @@
+[
+    {
+        "titulo": "WHATSAPP",
+        "descricao": "Aqui você pode tirar duvidas sobre os seus pedidos",
+        "icone": "whatsapp"
+    },
+    {
+        "titulo": "INSTAGRAM",
+        "descricao": "Aqui você pode ver fotos, vídeos e outros conteúdos da World Designer",
+        "icone": "instagram"
+    },
+    {
+        "titulo": "E-MAIL",
+        "descricao": "Aqui você pode dá sujestões de melhoria nos nossos sistemas",
+        "icone": "whatsapp"
+    }
+]
