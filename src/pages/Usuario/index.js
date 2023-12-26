@@ -13,23 +13,38 @@ import opcoes from '../../../database/perfilOpcoes.json'
 import falarConosco from '../../../database/falarConosco.json'
 
 export default function Usuario(props) {
+
+  const nomeUsaurio = "Bruno Santos"
+
   return (
     <>
       <View style={UsuarioStyles.cabecalho}>
         <View style={UsuarioStyles.containerUsuario}>
           <Feather name='user' size={30} color={Cores.branco} />
-          <Text style={UsuarioStyles.usuarioNome}> Bruno Santos </Text>
+          <Text style={UsuarioStyles.usuarioNome}> {nomeUsaurio} </Text>
         </View>
       </View>
-      <ScrollView style={{backgroundColor: Cores.azul}}>
+      <ScrollView style={{ backgroundColor: Cores.azul }}>
         <View>
           <View style={{ paddingVertical: 10 }}>
-            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <ScrollView horizontal={true}
+              showsHorizontalScrollIndicator={false}
+              style={{ borderBottomWidth: 0.8, borderColor: Cores.branco }}
+            >
               {
                 opcoes.map(opcao => (
                   <CardPerfil key={opcao.titulo}
                     titulo={opcao.titulo}
                     icone={opcao.icone}
+                    funcao={() => {
+                      if (opcao.titulo == "Meus dados") {
+                        return props.navigation.navigate('Meus Dados', {usuario: nomeUsaurio})
+                      }
+                      if (opcao.titulo == "Favoritos") {
+                        return props.navigation.navigate('Favoritos')
+                      }
+                      return alert(opcao.titulo)
+                    }}
                   />
                 ))
               }

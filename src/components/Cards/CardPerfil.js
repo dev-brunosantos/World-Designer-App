@@ -3,11 +3,11 @@ import { Feather } from '@expo/vector-icons'
 // IMPORTAÇÃO DE CORES
 import { Cores } from "../../styles/Cores";
 
-export const CardPerfil = ({titulo, icone}) => {
+export const CardPerfil = ({titulo, icone, funcao}) => {
     return(
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={funcao}>
             <View style={styles.containerIcone}>
-                <Feather name={icone} size={40} />
+                <Feather name={icone} size={40} color={Cores.branco}/>
             </View>
             <Text style={styles.texto}>
                 {titulo}
@@ -27,13 +27,15 @@ const styles = StyleSheet.create({
     containerIcone: {
         width: '60%',
         height: '60%',
-        borderWidth: 1,
+        borderWidth: 2,
+        borderColor: Cores.branco,
         borderRadius: 200,
         alignItems: "center",
         justifyContent: "center"
     },
     texto: {
-        fontSize: 16,
+        color: Cores.branco,
+        fontSize: 18,
         fontWeight: "bold",
         marginVertical: 5
     }

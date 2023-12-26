@@ -32,6 +32,7 @@ export default function Home(props) {
         <View style={HomeStyle.page}>
             <BtnWhatsapp />
             <Cabecalho
+                produtos={(txt) => setProduto(txt)}
                 irParaCarrinho={() => {
                     return props.navigation.navigate('Carrinho de Compras')
                 }}

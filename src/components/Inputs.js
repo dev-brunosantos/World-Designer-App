@@ -57,10 +57,16 @@ const styles = StyleSheet.create({
     container: {
         width: '90%',
         height: 70,
+        // borderWidth: 1,
         borderRadius: 10,
         alignItems: "center",
         justifyContent: "center",
-        position: 'relative'
+        position: 'relative',
+        shadowOffset: {width: 0, height: 10},
+        shadowColor: '#000',
+        shadowOpacity: 1,
+        elevation: 5,
+        marginVertical: 10
     },
     input: {
         width: '100%',

@@ -10,6 +10,7 @@ import Carrinho from './src/pages/Carrinho';
 import { BtnFechar } from './src/components/Botoes/BtnFechar';
 // IMPORTAÇÃO DE ESTILOS E CORES
 import { Cores } from './src/styles/Cores';
+import MeusDados from './src/pages/Usuario/MeusDados';
 
 const stack = createStackNavigator()
 
@@ -46,6 +47,11 @@ export default function App(props) {
           <stack.Screen key={4}
             name='Carrinho de Compras'
             component={Carrinho}
+          />
+
+          <stack.Screen 
+            name='Meus Dados'
+            component={MeusDados}
           />
         </stack.Navigator>
       </NavigationContainer>
