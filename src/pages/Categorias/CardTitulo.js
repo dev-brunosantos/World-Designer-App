@@ -4,14 +4,20 @@ import { Entypo } from '@expo/vector-icons'
 import { CardCategoria } from "../../components/Cards/CardCategoria";
 import { Cores } from "../../styles/Cores";
 
+import categoriaJson from '../../../database/categorias.json'
+
 export default function CardTitulo({imagem, titulo}) {
 
     const teste = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
     function Ver() {
         return (
-            teste.map(aaa => (
-                <CardCategoria />
+            categoriaJson.map(categoria => (
+                <CardCategoria 
+                    categoria={categoria.nome}
+                    imagem={categoria.img}
+                    funcao={() => alert(categoria.nome)}
+                />
             ))
         )
     }
