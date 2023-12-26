@@ -24,10 +24,8 @@ export default function Login(props) {
         <View style={[PagesStyles.page, { backgroundColor: Cores.azul }]}>
             <Image
                 source={require('../../../assets/logomarca.png')}
-                style={{ width: '80%', height: 150, marginTop: -10 }}
+                style={{ width: '70%', height: 140, marginTop: 0 }}
             />
-
-            <Text style={[PagesStyles.titulos, { color: Cores.branco }]}>Usuário</Text>
             <Input
                 placeholder="Nome ou e-mail do usuário"
                 valor={usuario}
@@ -36,8 +34,6 @@ export default function Login(props) {
                 background={'#fafafa60'}
                 pegaDados={(txt) => setUsuario(txt)}
             />
-
-            <Text style={[PagesStyles.titulos, { color: Cores.branco }]}>Senha</Text>
             <Senha
                 placeholder="Digite sua senha"
                 valor={senha}
@@ -46,14 +42,12 @@ export default function Login(props) {
                 background={'#fafafa60'}
                 pegaDados={(txt) => setSenha(txt)}
             />
-
             <Botao
                 titulo="Entrar"
                 funcao={logar}
                 txtColor={Cores.branco}
                 borderColor={Cores.branco}
             />
-
             <TouchableOpacity onPress={() => props.navigation.navigate('Novo Usuário')}>
                 <Text style={{ color: Cores.branco, fontSize: 20, fontWeight: 'bold' }}>
                     Novo Usuário
