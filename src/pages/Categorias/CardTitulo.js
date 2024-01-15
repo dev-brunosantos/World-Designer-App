@@ -4,27 +4,28 @@ import { Entypo } from '@expo/vector-icons'
 import { CardCategoria } from "../../components/Cards/CardCategoria";
 import { Cores } from "../../styles/Cores";
 
-import categoriaJson from '../../../database/categorias.json'
+// import categoriaJson from '../../../database/categorias.json'
 
-export default function CardTitulo({imagem, titulo}) {
+import Ver from "./VerItem";
 
-    const teste = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-    function Ver() {
-        return (
-            categoriaJson.map(categoria => (
-                <CardCategoria 
-                    categoria={categoria.nome}
-                    imagem={categoria.img}
-                    funcao={() => alert(categoria.nome)}
-                />
-            ))
-        )
-    }
+export default function CardTitulo({ imagem, titulo }) {
+    // COMPONENTE QUE MOSTRA OS ITENS DE CADA CATEGORIA
+    // function Ver(props) {
+    //     return (
+    //         categoriaJson.map(categoria => (
+    //             <CardCategoria
+    //                 categoria={categoria.nome}
+    //                 imagem={categoria.img}
+    //                 // funcao={() => alert(categoria.nome)}
+    //                 funcao={() => props.navigation.navigate('Produto')}
+    //             />
+    //         ))
+    //     )
+    // }
 
     const [setaAbrir, setSetaAbrir] = useState('chevron-small-down')
     const [altura, setAltura] = useState(0)
-
+    // FUNÇÃO QUE ABRE UMA VIEW COM OS CARDS DAS CATEGORIAS
     const abrirCategoria = () => {
         if (setaAbrir === 'chevron-small-down') {
             setSetaAbrir('chevron-small-up');
@@ -42,7 +43,7 @@ export default function CardTitulo({imagem, titulo}) {
                     <Image
                         style={{ width: '100%', height: '100%' }}
                         src={imagem}
-                        // src="https://bythiti.com.br/wp-content/uploads/2023/09/IMG_8990.jpg"
+                    // src="https://bythiti.com.br/wp-content/uploads/2023/09/IMG_8990.jpg"
                     />
                 </View>
                 <Text style={{ fontSize: 20 }}> {titulo} </Text>
@@ -53,7 +54,7 @@ export default function CardTitulo({imagem, titulo}) {
                 />
             </TouchableOpacity>
 
-            <View style={[styles.containerCategoria, {height: altura}]}>
+            <View style={[styles.containerCategoria, { height: altura }]}>
 
                 <Ver />
 

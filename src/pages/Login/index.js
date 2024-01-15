@@ -8,7 +8,7 @@ import { Botao } from '../../components/Botoes/Botao';
 import { PagesStyles } from '../../styles/PagesStyles';
 
 export default function Login(props) {
-    
+
     const [usuario, setUsuario] = useState('')
     const [senha, setSenha] = useState('')
 

@@ -5,6 +5,7 @@ import Categorias from '../pages/Categorias'
 // IMPORTAÇÃO DE ESTILOS
 import { DrawerOptionsStyles, TabsStyles, CategoriasStyles } from '../styles/drawer/DrawerStyles'
 import { Logomarca } from '../components/Logomarca'
+import Configuracoes from '../pages/Configuracoes'
 
 const drawer = createDrawerNavigator()
 
@@ -38,6 +39,17 @@ export default function Drawer(props) {
                     headerShown: true,
                 }}
             />
+            <drawer.Screen 
+                name='Configurações'
+                component={Configuracoes}
+                options={{
+                    headerStatusBarHeight: CategoriasStyles.cabecalho,
+                    headerStyle: CategoriasStyles.cabecalhoCor,
+                    headerLeftContainerStyle: CategoriasStyles.menuBar,
+                    headerShown: true,
+                }}
+            />
+
         </drawer.Navigator>
     )
 }

@@ -1,10 +1,11 @@
 import { StyleSheet, View, TouchableOpacity, Image } from "react-native";
 import { Cores } from "../../styles/Cores";
 
-export const CardCategoria = ({ imagem, local, categoria, funcao }) => {
+export const CardCategoria = ({ imagem, local, categoria, funcao, navigation }) => {
     return (
         <TouchableOpacity
             onPress={funcao}
+            // onPress={() => navigation.navigate('Produto')}
             style={{
                 width: 100,
                 height: 100,
@@ -36,12 +37,11 @@ const styles = StyleSheet.create({
         position: 'absolute'
     },
     txt: {
-        color: '#000', 
-        fontSize: 16, 
-        fontWeight: "bold", 
-        position: 'absolute', 
+        color: '#000',
+        fontSize: 16,
+        fontWeight: "bold",
+        position: 'absolute',
         bottom: 0,
         zIndex: 999
-
     }
 })

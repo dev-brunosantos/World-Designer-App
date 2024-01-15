@@ -11,6 +11,7 @@ import { BtnFechar } from './src/components/Botoes/BtnFechar';
 // IMPORTAÇÃO DE ESTILOS E CORES
 import { Cores } from './src/styles/Cores';
 import MeusDados from './src/pages/Usuario/MeusDados';
+import Produtos from './src/pages/Categorias/Produtos';
 
 const stack = createStackNavigator()
 
@@ -52,6 +53,11 @@ export default function App(props) {
           <stack.Screen 
             name='Meus Dados'
             component={MeusDados}
+          />
+
+          <stack.Screen 
+            name='Produto'
+            component={Produtos}
           />
         </stack.Navigator>
       </NavigationContainer>
